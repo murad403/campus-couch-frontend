@@ -16,7 +16,7 @@ const Navbar = () => {
     const user = false;
     // console.log(pathName)
     return (
-        <div className='relative'>
+        <div className='relative px-4'>
             <div className='py-9 flex justify-between items-center md:px-9 lg:px-0 px-3 sm:px-5'>
                 <Link href={"/"}>
                     <Image loading='eager' src={logo} alt='logo' width={57} height={64} />

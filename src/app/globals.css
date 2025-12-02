@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+body{
+    background-color: white;
+}
+
 
 @theme {
     --color-heading: #545454;

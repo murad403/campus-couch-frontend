@@ -21,7 +21,7 @@ const Slider = () => {
         const visibleCount = 3
         const items: TCategories[] = []
         for (let i = 0; i < visibleCount; i++) {
-            const index = (currentIndex + i) % categories.length
+            const index = (currentIndex + i) % categories.length;
             items.push(categories[index])
         }
         return items;
@@ -61,7 +61,7 @@ const Slider = () => {
                                 <div className="bg-white rounded-sm p-6 sm:p-8 flex flex-col items-center gap-4">
                                     <div className="w-full aspect-square rounded-xl overflow-hidden flex items-center justify-center">
                                         <Image
-                                            src={categories[currentIndex].image || "/placeholder.svg"}
+                                            src={categories[currentIndex].image}
                                             alt={categories[currentIndex].title}
                                             className="w-full h-full object-cover"
                                         />
@@ -81,7 +81,7 @@ const Slider = () => {
                                         >
                                             <div className="w-full aspect-square rounded-xl overflow-hidden flex items-center justify-center">
                                                 <Image
-                                                    src={product.image || "/placeholder.svg"}
+                                                    src={product.image}
                                                     alt={product.title}
                                                     className="w-full h-full object-cover"
                                                 />
@@ -103,7 +103,7 @@ const Slider = () => {
                                             className={`${index === 1 ? "w-full" : "w-full"} aspect-squar rounded-xl overflow-hidden flex items-center justify-center`}
                                         >
                                             <Image
-                                                src={product.image || "/placeholder.svg"}
+                                                src={product.image}
                                                 alt={product.title}
                                                 className="w-full h-full object-cover"
                                             />
