@@ -42,7 +42,7 @@ const ResetPassword = () => {
                     </div>
                     {errors.confirmNewPassword && <p className="text-red-400 text-sm mt-1">{errors.confirmNewPassword.message}</p>}
                 </div>
-                <button type='submit' className='bg-background rounded-sm cursor-pointer w-full py-3 font-medium'>Reset Password</button>
+                <button type='submit' className='bg-button-background rounded-sm cursor-pointer w-full py-3 font-medium'>Reset Password</button>
             </form>
         </div>
     )

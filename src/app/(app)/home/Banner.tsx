@@ -8,8 +8,8 @@ const Banner = () => {
             <div className='flex flex-col justify-center md:gap-10 gap-5 p-5 md:p-0'>
                 <h1 className='font-bold md:text-6xl text-4xl text-white'>Affordable & Sustainable Furniture  for Students</h1>
                 <p className='text-[18px] text-[#E6E6E6]'>Couch makes it easy for students to buy and rent affordable, high-quality second-hand furniture. Our mission is to create a sustainable, budget-friendly solution for furnishing student spaces effortlessly.</p>
-                <div className='space-x-6'>
-                    <button className='bg-background rounded-sm font-semibold py-3 px-5'>Shop Now</button>
+                <div className='space-x-6 *:cursor-pointer'>
+                    <button className='bg-button-background rounded-sm font-semibold py-3 px-5'>Shop Now</button>
                     <button className='rounded-sm font-semibold py-3 px-5 border border-white text-white'>Sell Your Furniture</button>
                 </div>
                 <div className='flex items-center gap-12 '>

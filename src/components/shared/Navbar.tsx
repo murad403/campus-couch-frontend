@@ -48,7 +48,7 @@ const Navbar = () => {
                                         <Image loading='eager' src={profile} alt='profile' width={24} height={24} />
                                     </Link>
                                 </li> :
-                                <li className='bg-background py-2 px-5 text-title rounded-sm'>
+                                <li className='bg-button-background py-2 px-5 text-title rounded-sm'>
                                     <Link href={"/auth/sign-in"}>Sign In</Link>
                                 </li>
                         }

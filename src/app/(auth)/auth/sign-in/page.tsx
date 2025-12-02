@@ -42,7 +42,7 @@ const SignInPage = () => {
         <div className='flex justify-end'>
           <Link href={"/auth/forgot-password"} className='text-[18px] text-description underline underline-offset-2'>Forgot Password?</Link>
         </div>
-        <button type='submit' className='bg-background rounded-sm cursor-pointer w-full py-3 font-medium'>Sign In</button>
+        <button type='submit' className='bg-button-background rounded-sm cursor-pointer w-full py-3 font-medium'>Sign In</button>
       </form>
       <div className='mt-9 text-center'>
         <p className='text-[18px]'>

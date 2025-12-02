@@ -85,7 +85,7 @@ const VerifyOtp = () => {
                     }
 
                 </div>
-                <button type='submit' className='bg-background rounded-sm cursor-pointer w-full py-3 font-medium'>Verify OTP</button>
+                <button type='submit' className='bg-button-background rounded-sm cursor-pointer w-full py-3 font-medium'>Verify OTP</button>
             </form>
         </div>
     )

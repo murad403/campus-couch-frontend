@@ -48,7 +48,7 @@ const SignUpPage = () => {
           <label className='text-[18px] text-title mb-3'>I have read and agree with the terms & condition</label>
           {errors.termsAndContion && <p className="text-red-400 text-sm mt-1">{errors.termsAndContion.message}</p>}
         </div>
-        <button type='submit' className='bg-background rounded-sm cursor-pointer w-full py-3 font-medium'>Sign Up</button>
+        <button type='submit' className='bg-button-background rounded-sm cursor-pointer w-full py-3 font-medium'>Sign Up</button>
       </form>
       <div className='mt-9 text-center'>
         <p className='text-[18px]'>

@@ -24,7 +24,7 @@ const ForgotPassword = () => {
                     <input placeholder='Email address' {...register("email")} type="email" className='appearance-none w-full outline-none border border-heading rounded-sm p-3 text-description' />
                     {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>}
                 </div>
-                <button type='submit' className='bg-background rounded-sm cursor-pointer w-full py-3 font-medium'>Send OTP</button>
+                <button type='submit' className='bg-button-background rounded-sm cursor-pointer w-full py-3 font-medium'>Send OTP</button>
             </form>
         </div>
     )
