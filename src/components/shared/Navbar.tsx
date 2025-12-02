@@ -13,6 +13,7 @@ import { RxCross2 } from 'react-icons/rx';
 const Navbar = () => {
     const pathName = usePathname();
     const [openSidebar, setOpenSidebar] = useState<boolean>(false);
+    const user = false;
     // console.log(pathName)
     return (
         <div className='relative'>
@@ -40,11 +41,17 @@ const Navbar = () => {
                                 <IoCartOutline size={24} />
                             </Link>
                         </li>
-                        <li className='border border-description rounded-full p-1'>
-                            <Link href={'/profile'}>
-                                <Image loading='eager' src={profile} alt='profile' width={24} height={24} />
-                            </Link>
-                        </li>
+                        {
+                            user ?
+                                <li className='border border-description rounded-full p-1'>
+                                    <Link href={'/profile'}>
+                                        <Image loading='eager' src={profile} alt='profile' width={24} height={24} />
+                                    </Link>
+                                </li> :
+                                <li className='bg-background py-2 px-5 text-title rounded-sm'>
+                                    <Link href={"/auth/sign-in"}>Sign In</Link>
+                                </li>
+                        }
                         <li className='md:hidden block '>
                             <button onClick={() => setOpenSidebar(true)} className='border border-description rounded-full p-1'>
                                 <CgMenuLeftAlt size={24} />
@@ -58,11 +65,11 @@ const Navbar = () => {
             {/* responsive */}
             <div className={`md:hidden ${openSidebar ? "block" : "hidden"} absolute top-0 flex justify-between w-full`}>
                 <div className='w-1/2 min-h-screen' onClick={() => setOpenSidebar(false)}>
-                    
+
                 </div>
                 <div className={`bg-gray-500 w-1/2 min-h-screen p-3 text-gray-300`}>
                     <button onClick={() => setOpenSidebar(false)}>
-                        <RxCross2 size={24}/>
+                        <RxCross2 size={24} />
                     </button>
                     <div>
                         <ul className='space-y-2 text-[18px] capitalize'>
