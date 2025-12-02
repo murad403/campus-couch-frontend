@@ -46,8 +46,8 @@ const SignInPage = () => {
       </form>
       <div className='mt-9 text-center'>
         <p className='text-[18px]'>
-          <span className='text-description'>Don't have account? </span>
-          <Link href={"/auth/sign-up"} className='font-bold underline underline-offset-2 text-heading'>Create account</Link>
+          <span className='text-description'>{`Don't`} have account? </span>
+          <Link href={"/auth/sign-up"} className='font-semibold underline underline-offset-2 text-heading'>Create account</Link>
         </p>
       </div>
     </div>
