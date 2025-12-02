@@ -3,7 +3,7 @@ import Navbar from '../shared/Navbar'
 
 const Wrapper = ({children}: {children: React.ReactNode}) => {
   return (
-    <div className='max-w-[1500px] mx-auto'>
+    <div>
         {/* navbar */}
         <div>
             <Navbar></Navbar>
