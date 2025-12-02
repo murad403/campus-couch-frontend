@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const VerifyOtp = () => {
@@ -7,6 +7,15 @@ const VerifyOtp = () => {
     const inputRefs = useRef<Array<HTMLInputElement | null>>([]);
     const [otp, setOtp] = useState<string[]>(Array(6).fill(""));
     const [otpError, setOtpError] = useState<string>("");
+    const [timeLeft, setTimeLeft] = useState<number>(30);
+
+    useEffect(() => {
+        if (timeLeft <= 0) return;
+        const timer = setInterval(() => {
+            setTimeLeft((t) => t - 1);
+        }, 1000);
+        return () => clearInterval(timer);
+    }, [timeLeft]);
 
     const handleChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
@@ -38,6 +47,10 @@ const VerifyOtp = () => {
         }
         console.log("Submitted OTP:", originalOtp);
     };
+
+    const handleResendCode = () => {
+        setTimeLeft(30);
+    }
     return (
         <div className='md:w-[40%] w-[90%]'>
             <form className='space-y-4' onSubmit={handleSubmit(onsubmit)}>
@@ -57,6 +70,21 @@ const VerifyOtp = () => {
                 {otpError && (
                     <p className='text-sm text-red-500 mb-4 text-center'>{otpError}</p>
                 )}
+                <div className='flex justify-between items-center'>
+                    <p className='font-medium text-[18px] text-heading'>{`Don't`} receive the code?</p>
+                    {
+                        timeLeft > 0 ?
+                            <p className='text-[16px] text-description'>Resend in {timeLeft}s</p> :
+                            <button
+                                type="button"
+                                onClick={handleResendCode}
+                                className='font-medium text-[16px] text-main cursor-pointer'
+                            >
+                                Resend
+                            </button>
+                    }
+
+                </div>
                 <button type='submit' className='bg-background rounded-sm cursor-pointer w-full py-3 font-medium'>Verify OTP</button>
             </form>
         </div>
