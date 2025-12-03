@@ -38,8 +38,14 @@ const Navbar = () => {
                     <ul className='flex items-center gap-4'>
                         <li className='border border-description rounded-full p-1'>
                             <Link href={'/cart'}>
-                                <IoCartOutline size={24} />
+                                <IoCartOutline className='text-title' size={24} />
                             </Link>
+                        </li>
+                        
+                        <li className='md:hidden block '>
+                            <button onClick={() => setOpenSidebar(true)} className='border border-description rounded-full p-1'>
+                                <CgMenuLeftAlt className='text-title' size={24} />
+                            </button>
                         </li>
                         {
                             user ?
@@ -52,11 +58,6 @@ const Navbar = () => {
                                     <Link href={"/auth/sign-in"}>Sign In</Link>
                                 </li>
                         }
-                        <li className='md:hidden block '>
-                            <button onClick={() => setOpenSidebar(true)} className='border border-description rounded-full p-1'>
-                                <CgMenuLeftAlt size={24} />
-                            </button>
-                        </li>
                     </ul>
                 </div>
             </div>

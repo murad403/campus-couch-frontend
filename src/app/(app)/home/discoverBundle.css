@@ -1,0 +1,18 @@
+.bgImage1 {
+    background-image: url("../../../assets/bundles/living\ room.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bgImage2 {
+    background-image: url("../../../assets/bundles/bed\ room.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bgImage3 {
+    background-image: url("../../../assets/bundles/dining\ room.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

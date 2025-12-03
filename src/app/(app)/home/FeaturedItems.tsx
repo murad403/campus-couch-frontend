@@ -20,9 +20,9 @@ const FeaturedItems = () => {
             </div>
             <div className='flex justify-center text-title text-[18px] font-medium'>
                 <Link href={"/shop"} className='flex gap-2 items-center'>
-            <span className='underline underline-offset-2'>View All Furniture</span>
-            <FiArrowUpRight />
-            </Link>
+                    <span className='underline underline-offset-2'>View All Furniture</span>
+                    <FiArrowUpRight />
+                </Link>
             </div>
         </div>
     )
