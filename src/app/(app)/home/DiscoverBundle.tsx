@@ -5,9 +5,9 @@ import { IoAdd } from 'react-icons/io5';
 const DiscoverBundle = () => {
     return (
         <div className='bg-common-background md:p-10 p-5'>
-            <div className='flex justify-between items-center mb-12'>
+            <div className='flex flex-col md:flex-row justify-between md:items-center mb-12 gap-5'>
                 <h2 className='font-semibold text-4xl text-black'>Discover the Perfect Furniture <br /> Bundle for Your Space</h2>
-                <Link className='bg-button-background py-3 px-5 flex items-center rounded-sm text-title' href={'/add-bundle'}>
+                <Link className='bg-button-background py-3 px-5 flex items-center rounded-sm text-title justify-center' href={'/add-bundle'}>
                     <IoAdd size={24} />
                     <span className='font-medium'>Bundles</span>
                 </Link>

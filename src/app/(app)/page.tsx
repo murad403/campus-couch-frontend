@@ -5,6 +5,7 @@ import FeaturedItems from './home/FeaturedItems'
 import DiscoverBundle from './home/DiscoverBundle'
 import ConfortZone from './home/ComfortZone'
 import Feature from './home/Feature'
+import Transform from './home/Transform'
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
       <DiscoverBundle></DiscoverBundle>
       <ConfortZone></ConfortZone>
       <Feature></Feature>
+      <Transform></Transform>
     </div>
   )
 }

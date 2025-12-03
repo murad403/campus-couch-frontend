@@ -8,15 +8,15 @@ const ProductCard = ({product}: {product: TProduct}) => {
         console.log("added to wishlist", product.name)
     }
     return (
-        <div className='h-[463px] w-full space-y-4'>
+        <div className='h-[463px] w-full md:space-y-4 space-y-1'>
             <div className='bg-[#F5F5F5] h-[332px] rounded-sm flex justify-center items-center relative'>
                 <Image src={product.image} width={220} height={220} alt={product.name} />
                 <button onClick={handleWishList} className='text-title absolute top-3 right-3 bg-white p-1 rounded-full cursor-pointer'>
                     <MdFavoriteBorder size={24}/>
                 </button>
             </div>
-            <div className='space-y-2'>
-                <h2 className='font-medium text-[32px] text-black'>{product.name}</h2>
+            <div className='space-y-1 md:space-y-2'>
+                <h2 className='font-medium text-[32px] text-black capitalize'>{product.name}</h2>
                 <div className='gap-3 text-[18px] flex text-title'>
                     <p className='font-medium'>${product.rent}/mo</p>
                     <p className='text-[17px]'>${product.price} to buy</p>
