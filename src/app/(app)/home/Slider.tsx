@@ -1,5 +1,5 @@
 "use client"
-import { categories, TCategories } from '@/libs/slider'
+import { categories, TCategories } from '@/libs/categories'
 import { Armchair, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
