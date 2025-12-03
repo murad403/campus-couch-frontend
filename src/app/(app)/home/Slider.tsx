@@ -34,8 +34,8 @@ const Slider = () => {
                     <Armchair className='text-heading' size={80} />
                     <p className='text-xl text-heading'>+200 Unique <br /> Products</p>
                 </div>
-                <Link href={"/all-categories"} className='flex gap-2 items-center text-heading'>
-                    <span>All categories</span>
+                <Link href={"/all-category"} className='flex gap-2 items-center text-heading'>
+                    <span className='underline underline-offset-2'>All categories</span>
                     <MdArrowRightAlt />
                 </Link>
             </div>
