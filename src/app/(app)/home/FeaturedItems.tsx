@@ -19,7 +19,7 @@ const FeaturedItems = () => {
     const [activeTab, setActiveTab] = useState("best-selling");
     console.log("activeTab", activeTab);
     return (
-        <div className='md:p-10 p-5 space-y-5 md:space-y-10'>
+        <div className='md:py-10 py-5 container mx-auto space-y-5 md:space-y-10'>
             <div className='flex flex-col gap-5 md:flex-row justify-between'>
                 <div>
                     <h1 className='font-semibold text-4xl text-black'>Featured Items</h1>

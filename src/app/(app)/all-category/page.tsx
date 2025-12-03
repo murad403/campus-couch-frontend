@@ -3,7 +3,7 @@ import { categories, TCategories } from '@/libs/categories'
 
 const AllCategory = () => {
   return (
-    <div className='md:p-10 p-5'>
+    <div className='container mx-auto md:pb-10 pb-5'>
       <h1 className='font-semibold text-4xl text-black text-center md:mb-12 mb-7'>All Category</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
         {

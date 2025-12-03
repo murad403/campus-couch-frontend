@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const ConfortZone = () => {
     return (
-        <div className='md:p-10 p-5 space-y-5 md:space-y-10'>
+        <div className='container mx-auto md:py-10 py-5 space-y-5 md:space-y-10'>
             <div className='flex justify-between'>
                 <div>
                     <h1 className='font-semibold text-4xl text-black'>The Comfort Zone</h1>
