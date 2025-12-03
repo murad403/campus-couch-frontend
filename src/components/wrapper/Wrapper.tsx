@@ -1,20 +1,19 @@
 import React from 'react'
 import Navbar from '../shared/Navbar'
+import Footer from '../shared/Footer'
 
 const Wrapper = ({children}: {children: React.ReactNode}) => {
   return (
     <div>
         {/* navbar */}
-        <div>
+
             <Navbar></Navbar>
-        </div>
+
       <main>
         {children}
       </main>
       {/* footer */}
-      <div>
-
-      </div>
+      <Footer></Footer>
     </div>
   )
 }
