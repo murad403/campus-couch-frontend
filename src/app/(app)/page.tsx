@@ -4,6 +4,7 @@ import Slider from './home/Slider'
 import FeaturedItems from './home/FeaturedItems'
 import DiscoverBundle from './home/DiscoverBundle'
 import ConfortZone from './home/ComfortZone'
+import Feature from './home/Feature'
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <FeaturedItems></FeaturedItems>
       <DiscoverBundle></DiscoverBundle>
       <ConfortZone></ConfortZone>
+      <Feature></Feature>
     </div>
   )
 }
