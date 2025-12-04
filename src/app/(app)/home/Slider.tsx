@@ -27,9 +27,9 @@ const Slider = () => {
         return items;
     }
     return (
-        <div className='bg-common-background px-5'>
+        <div className='bg-common-background px-5 md:px-0'>
             <div className='container mx-auto md:py-10 py-5 flex items-center flex-col md:flex-row gap-5'>
-                <div className='w-full md:w-[25%] space-y-5 md:space-y-7'>
+                <div className='w-full md:w-[25%] space-y-3 md:space-y-7'>
                     <h2 className='text-4xl font-medium text-black'>Shop by categories</h2>
                     <div className='flex items-center gap-3'>
                         <Armchair className='text-heading' size={80} />

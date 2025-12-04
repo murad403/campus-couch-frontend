@@ -19,13 +19,13 @@ const FeaturedItems = () => {
     const [activeTab, setActiveTab] = useState("best-selling");
     console.log("activeTab", activeTab);
     return (
-        <div className='md:py-10 py-5 container mx-auto space-y-5 md:space-y-10 px-5'>
+        <div className='md:py-10 py-5 container mx-auto space-y-5 md:space-y-10 px-5 md:px-0'>
             <div className='flex flex-col gap-5 md:flex-row justify-between'>
                 <div>
                     <h1 className='font-semibold text-4xl text-black'>Featured Items</h1>
                     <p className='text-[18px] text-heading'>Trending Now: Best-Selling & Most-Rented Items!</p>
                 </div>
-                <div className='space-x-5'>
+                <div className='space-x-5 space-y-5 md:space-y-0'>
                     {
                         tabs.map((tab: TTab, index: number) =>
                         <button onClick={() => setActiveTab(tab.filterText)} className={`font-medium text-[18px] cursor-pointer text-heading border border-heading py-3 px-5 rounded-sm ${activeTab === tab.filterText ? "bg-button-background" : ""}`} key={index}>

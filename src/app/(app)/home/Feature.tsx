@@ -4,7 +4,7 @@ import React from 'react'
 
 const Feature = () => {
   return (
-    <div className='bg-common-background'>
+    <div className='bg-common-background px-5 md:px-0'>
       <div className='md:py-10 py-5 container mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-6'>
         {
           feautures.map((feature, index) =>

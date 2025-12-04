@@ -68,7 +68,7 @@ const Navbar = () => {
                 <div className='w-1/2 min-h-screen' onClick={() => setOpenSidebar(false)}>
 
                 </div>
-                <div className={`bg-gray-500 w-1/2 min-h-screen p-3 text-gray-300`}>
+                <div className={`bg-gray-500 w-1/2 min-h-screen p-3 text-gray-300 z-10`}>
                     <button onClick={() => setOpenSidebar(false)}>
                         <RxCross2 size={24} />
                     </button>

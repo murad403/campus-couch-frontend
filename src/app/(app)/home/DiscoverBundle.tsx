@@ -4,7 +4,7 @@ import { IoAdd } from 'react-icons/io5';
 
 const DiscoverBundle = () => {
     return (
-        <div className='bg-common-background px-5'>
+        <div className='bg-common-background px-5 md:px-0'>
             <div className=' md:py-10 py-5 container mx-auto'>
                 <div className='flex flex-col md:flex-row justify-between md:items-center mb-12 gap-5'>
                     <h2 className='font-semibold text-4xl text-black'>Discover the Perfect Furniture <br /> Bundle for Your Space</h2>
@@ -25,7 +25,7 @@ const DiscoverBundle = () => {
                             <h3 className='text-white font-semibold text-[40px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Bed Room</h3>
                         </div>
                     </div>
-                    <div className='bgImage3 h-[540px] w-full rounded-sm relative'>
+                    <div className='bgImage3 md:h-[540px] h-80 w-full rounded-sm relative'>
                         <div className='h-full w-full bg-gray-400 opacity-55'></div>
                         <h3 className='text-white font-semibold text-[40px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Dining Room</h3>
                     </div>

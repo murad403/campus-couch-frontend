@@ -1,6 +1,7 @@
 import { TProduct } from '@/libs/products'
 import { Rating } from '@mui/material'
 import Image from 'next/image'
+import Link from 'next/link'
 import { MdFavoriteBorder } from 'react-icons/md'
 
 const ProductCard = ({ product, activeLayout }: { product: TProduct, activeLayout: string }) => {
@@ -26,9 +27,11 @@ const ProductCard = ({ product, activeLayout }: { product: TProduct, activeLayou
                 <div>
                 {
                     activeLayout === "col" && 
-                    <div className='space-y-1 md:space-y-2'>
+                    <div className=''>
                         <p className='text-sm text-heading'>{product.description}</p>
-                        <button className='bg-button-background rounded-sm font-semibold py-3 px-5 cursor-pointer'>See Details</button>
+                        <div className='mt-5'>
+                            <Link href={`/shop/${product.id}`} className='bg-button-background rounded-sm font-semibold py-3 px-5 cursor-pointer mt-1'>See Details</Link>
+                        </div>
                     </div>
                 }
             </div>
