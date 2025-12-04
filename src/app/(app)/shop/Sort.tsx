@@ -3,15 +3,14 @@ import { ChevronDown } from 'lucide-react';
 import React from 'react';
 import { IconType } from 'react-icons';
 import { CiGrid2H, CiGrid41 } from 'react-icons/ci';
-import { IoIosArrowDown } from 'react-icons/io';
 
 type TLayout = {
     layout: "col" | "grid";
     icon: IconType;
 }
 const layouts: TLayout[] = [
+    { layout: "grid", icon: CiGrid41 },
     { layout: "col", icon: CiGrid2H },
-    { layout: "grid", icon: CiGrid41 }
 ]
 
 const Sort = ({ setActiveLayout, activeLayout, setSortText }: { setActiveLayout: React.Dispatch<"col" | "grid">, activeLayout: string, setSortText: React.Dispatch<string> }) => {
@@ -28,7 +27,7 @@ const Sort = ({ setActiveLayout, activeLayout, setSortText }: { setActiveLayout:
             </div>
 
             <div className='relative'>
-                <select onChange={(e) => setSortText(e.target.value)} defaultValue={"latest"} className='rounded-sm appearance-none bg-[#F5F5F5] py-2 px-5 outline-none border-none text-black text-sm' name="filter" id="filter">
+                <select onChange={(e) => setSortText(e.target.value)} defaultValue={"latest"} className='rounded-sm appearance-none bg-[#F5F5F5] py-3 px-5 outline-none border-none text-black text-sm' name="filter" id="filter">
                     <option value="latest">Sort by latest</option>
                     <option value="price-low">Price: Low to High</option>
                     <option value="price-high">Price: High to Low</option>

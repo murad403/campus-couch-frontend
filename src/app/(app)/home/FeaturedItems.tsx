@@ -19,7 +19,7 @@ const FeaturedItems = () => {
     const [activeTab, setActiveTab] = useState("best-selling");
     console.log("activeTab", activeTab);
     return (
-        <div className='md:py-10 py-5 container mx-auto space-y-5 md:space-y-10'>
+        <div className='md:py-10 py-5 container mx-auto space-y-5 md:space-y-10 px-5'>
             <div className='flex flex-col gap-5 md:flex-row justify-between'>
                 <div>
                     <h1 className='font-semibold text-4xl text-black'>Featured Items</h1>
@@ -37,7 +37,7 @@ const FeaturedItems = () => {
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
                 {
-                    products.slice(0, 4).map((product, index) => <ProductCard key={index} product={product}></ProductCard>)
+                    products.slice(0, 4).map((product, index) => <ProductCard activeLayout='grid' key={index} product={product}></ProductCard>)
                 }
             </div>
             <div className='flex justify-center text-title text-[18px] font-medium'>

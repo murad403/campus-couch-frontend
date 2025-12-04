@@ -4,7 +4,7 @@ import { IoAdd } from 'react-icons/io5';
 
 const DiscoverBundle = () => {
     return (
-        <div className='bg-common-background'>
+        <div className='bg-common-background px-5'>
             <div className=' md:py-10 py-5 container mx-auto'>
                 <div className='flex flex-col md:flex-row justify-between md:items-center mb-12 gap-5'>
                     <h2 className='font-semibold text-4xl text-black'>Discover the Perfect Furniture <br /> Bundle for Your Space</h2>

@@ -7,7 +7,7 @@ import paypal from "@/assets/footer/paypal.png";
 
 const Footer = () => {
   return (
-    <footer className='bg-black'>
+    <footer className='bg-black px-5 md:px-0'>
       <div className='md:py-10 py-5 container mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10'>
           <div className='md:space-y-4 space-y-2'>

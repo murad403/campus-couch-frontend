@@ -27,7 +27,7 @@ const Slider = () => {
         return items;
     }
     return (
-        <div className='bg-common-background'>
+        <div className='bg-common-background px-5'>
             <div className='container mx-auto md:py-10 py-5 flex items-center flex-col md:flex-row gap-5'>
                 <div className='w-full md:w-[25%] space-y-5 md:space-y-7'>
                     <h2 className='text-4xl font-medium text-black'>Shop by categories</h2>
