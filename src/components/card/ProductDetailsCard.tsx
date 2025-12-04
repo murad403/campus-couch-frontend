@@ -16,7 +16,7 @@ const ProductDetailsCard = ({ product }: { product: TProduct }) => {
     return (
         <div className='bg-common-background px-5 md:px-0'>
             <div className='container mx-auto'>
-                <div className='flex flex-col md:flex-row gap-10'>
+                <div className='flex flex-col md:flex-row md:gap-10'>
                     <div className='w-full md:w-1/2 space-y-5 my-10'>
                         <div className='bg-[#F5F5F5] flex justify-center items-center rounded-sm'>
                             <Image src={product.image} alt={product.name} width={470} height={470} />
