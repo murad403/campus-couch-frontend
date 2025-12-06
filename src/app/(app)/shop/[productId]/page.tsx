@@ -4,6 +4,7 @@ import { products } from '@/libs/products';
 import { useParams } from 'next/navigation'
 import React from 'react'
 import ProductDetailsTabs from './ProductDetailsTabs';
+import RelatedProducts from './RelatedProducts';
 
 const ProductDetails = () => {
     const { productId } = useParams();
@@ -14,6 +15,7 @@ const ProductDetails = () => {
             <h1 className='font-semibold text-4xl text-black text-center md:mb-12 mb-7'>Product Details</h1>
             <ProductDetailsCard product={product!}></ProductDetailsCard>
             <ProductDetailsTabs product={product!}></ProductDetailsTabs>
+            <RelatedProducts></RelatedProducts>
         </div>
     )
 }
