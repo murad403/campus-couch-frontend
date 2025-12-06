@@ -25,15 +25,15 @@ const ProductDetailsTabs = ({ product }: { product: TProduct }) => {
     // console.log(value);
     return (
         <div className='px-5 md:px-0 mt-10'>
-            <div className='flex justify-center items-center gap-5 mb-5'>
+            <div className='flex justify-center items-center md:gap-5 gap-3 mb-5'>
                 {
                     tabs.map(tab =>
-                        <button onClick={() => setActiveTab(tab)} key={tab} className={`uppercase cursor-pointer text-2xl ${activeTab === tab ? "text-title border-b-2 border-button-background" : "text-description"}`}>{tab}</button>
+                        <button onClick={() => setActiveTab(tab)} key={tab} className={`uppercase cursor-pointer text-xl md:text-2xl ${activeTab === tab ? "text-title border-b-2 border-button-background" : "text-description"}`}>{tab}</button>
                     )
                 }
             </div>
 
-            <div className='bg-common-background py-10'>
+            <div className='bg-common-background md:py-10 py-5 px-5 md:px-0'>
                 <div className='container mx-auto'>
                     {
                         activeTab === "description" && <p className='text-[18px] text-heading'>{product.description}</p>
