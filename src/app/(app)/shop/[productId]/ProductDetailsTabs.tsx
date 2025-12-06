@@ -1,14 +1,28 @@
+"use client";
 import { TProduct } from '@/libs/products';
 import { reviews, TReview } from '@/libs/reviews';
+import { Rating } from '@mui/material';
 import Image from 'next/image';
 import React, { useState } from 'react'
 import { MdStar } from 'react-icons/md';
 
 const tabs: string[] = ["description", "additional", "reviews"];
 
-const ProductDetailsTabs = ({product}: {product: TProduct}) => {
+const ProductDetailsTabs = ({ product }: { product: TProduct }) => {
     const [activeTab, setActiveTab] = useState<string>("description");
-    // console.log(activeTab);
+    const [value, setValue] = useState<number>(0);
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const message = form.get("message");
+        const newReview = {
+            value, message
+        }
+        console.log(newReview)
+    }
+
+    // console.log(value);
     return (
         <div className='px-5 md:px-0 mt-10'>
             <div className='flex justify-center items-center gap-5 mb-5'>
@@ -25,7 +39,7 @@ const ProductDetailsTabs = ({product}: {product: TProduct}) => {
                         activeTab === "description" && <p className='text-[18px] text-heading'>{product.description}</p>
                     }
                     {
-                        activeTab === "additional" && 
+                        activeTab === "additional" &&
                         <div className='flex justify-center gap-7'>
                             <div className='text-[18px]'>
                                 <h3 className='font-medium text-black'>Dimensions</h3>
@@ -38,29 +52,48 @@ const ProductDetailsTabs = ({product}: {product: TProduct}) => {
                         </div>
                     }
                     {
-                        activeTab === "reviews" && 
+                        activeTab === "reviews" &&
                         <div className='flex flex-col md:flex-row gap-10'>
                             <div className='w-full md:w-1/2 space-y-5'>
                                 {
-                                    reviews.map((review: TReview) => 
-                                    <div className='p-5 bg-white rounded-lg' key={review.id}>
-                                        <div className='flex justify-between items-center'>
-                                            <div className='flex items-center gap-2'>
-                                                <Image src={review.image} alt={review.name} width={40} height={40} className='rounded-full border'/>
-                                                <h3 className='text-black text-[20px]'>{review.name}</h3>
+                                    reviews.map((review: TReview) =>
+                                        <div className='p-5 bg-white rounded-lg' key={review.id}>
+                                            <div className='flex justify-between items-center'>
+                                                <div className='flex items-center gap-2'>
+                                                    <Image src={review.image} alt={review.name} width={40} height={40} className='rounded-full border' />
+                                                    <h3 className='text-black text-[20px] font-medium'>{review.name}</h3>
+                                                </div>
+                                                <div className='flex items-center gap-2'>
+                                                    <MdStar color='orange' size={24} />
+                                                    <span className='text-black text-lg'>{review.rating}</span>
+                                                </div>
                                             </div>
-                                            <div className='flex items-center gap-2'>
-                                                 <MdStar color='orange' size={24} />
-                                                 <span className='text-black text-xl'>{review.rating}</span>
-                                            </div>
+                                            <p className=''>{review.message}</p>
                                         </div>
-                                        <p className=''>{review.message}</p>
-                                    </div>
                                     )
                                 }
                             </div>
-                            <div className='w-full md:w-1/2'>
 
+                            <div className='w-full md:w-1/2 space-y-3'>
+                                <h1 className='text-2xl font-bold text-title'>Add a review</h1>
+                                <p className='text-[16px] text-heading'>Your email address will not be published. Required fields are marked</p>
+                                <form onSubmit={handleSubmit} className='space-y-3'>
+                                    <div className='flex items-center gap-3'>
+                                        <h2 className='text-xl font-medium text-title'>Your rating</h2>
+                                        <Rating
+                                            name="simple-controlled"
+                                            value={value}
+                                            onChange={(event, newValue) => {
+                                                setValue(newValue!);
+                                            }}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className='text-[18px] text-title mb-3'>Your review</label>
+                                        <textarea name="message" id="message" className='w-full min-h-[200px] outline-none border border-heading p-5 rounded-lg' placeholder='Message'></textarea>
+                                    </div>
+                                    <button type='submit' className='bg-button-background rounded-sm font-semibold py-3 px-5 cursor-pointer'>Submit</button>
+                                </form>
                             </div>
                         </div>
                     }

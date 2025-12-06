@@ -13,7 +13,7 @@ const ProductDetails = () => {
         <div className='px-5 md:px-0 mb-10'>
             <h1 className='font-semibold text-4xl text-black text-center md:mb-12 mb-7'>Product Details</h1>
             <ProductDetailsCard product={product!}></ProductDetailsCard>
-            <ProductDetailsTabs product={product}></ProductDetailsTabs>
+            <ProductDetailsTabs product={product!}></ProductDetailsTabs>
         </div>
     )
 }
