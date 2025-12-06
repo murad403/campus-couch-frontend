@@ -1,5 +1,5 @@
-"use client";
-import { TProduct } from '@/libs/products';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client"; 
 import { reviews, TReview } from '@/libs/reviews';
 import { Rating } from '@mui/material';
 import Image from 'next/image';
@@ -8,7 +8,7 @@ import { MdStar } from 'react-icons/md';
 
 const tabs: string[] = ["description", "additional", "reviews"];
 
-const ProductDetailsTabs = ({ product }: { product: TProduct }) => {
+const ProductDetailsTabs = ({ product }: { product: any }) => {
     const [activeTab, setActiveTab] = useState<string>("description");
     const [value, setValue] = useState<number>(0);
 
@@ -24,7 +24,7 @@ const ProductDetailsTabs = ({ product }: { product: TProduct }) => {
 
     // console.log(value);
     return (
-        <div className='px-5 md:px-0 mt-10'>
+        <div className=' mt-10'>
             <div className='flex justify-center items-center md:gap-5 gap-3 mb-5'>
                 {
                     tabs.map(tab =>

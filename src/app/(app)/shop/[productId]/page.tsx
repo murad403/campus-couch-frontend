@@ -4,7 +4,7 @@ import { products } from '@/libs/products';
 import { useParams } from 'next/navigation'
 import React from 'react'
 import ProductDetailsTabs from '../../../../components/shared/ProductDetailsTabs';
-import RelatedProducts from './RelatedProducts';
+import RelatedProducts from '../../../../components/shared/RelatedProducts';
 
 const ProductDetails = () => {
     const { productId } = useParams();
