@@ -3,7 +3,7 @@ import ProductDetailsCard from '@/components/card/ProductDetailsCard';
 import { products } from '@/libs/products';
 import { useParams } from 'next/navigation'
 import React from 'react'
-import ProductDetailsTabs from './ProductDetailsTabs';
+import ProductDetailsTabs from '../../../../components/shared/ProductDetailsTabs';
 import RelatedProducts from './RelatedProducts';
 
 const ProductDetails = () => {

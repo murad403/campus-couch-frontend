@@ -57,7 +57,7 @@ const ProductDetailsTabs = ({ product }: { product: TProduct }) => {
                             <div className='w-full md:w-1/2 space-y-5'>
                                 {
                                     reviews.map((review: TReview) =>
-                                        <div className='p-5 bg-white rounded-lg' key={review.id}>
+                                        <div className='p-5 bg-white rounded-lg space-y-3' key={review.id}>
                                             <div className='flex justify-between items-center'>
                                                 <div className='flex items-center gap-2'>
                                                     <Image src={review.image} alt={review.name} width={40} height={40} className='rounded-full border' />
@@ -69,6 +69,7 @@ const ProductDetailsTabs = ({ product }: { product: TProduct }) => {
                                                 </div>
                                             </div>
                                             <p className=''>{review.message}</p>
+                                            <p className='text-[#B0B0B0] text-sm'>{review.date}</p>
                                         </div>
                                     )
                                 }

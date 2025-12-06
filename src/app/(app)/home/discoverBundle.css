@@ -1,17 +1,17 @@
 .bgImage1 {
-    background-image: url("../../../assets/bundles/living\ room.jpg");
+    background-image: url("../../../assets/bundles/living.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .bgImage2 {
-    background-image: url("../../../assets/bundles/bed\ room.jpg");
+    background-image: url("../../../assets/bundles/bed.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .bgImage3 {
-    background-image: url("../../../assets/bundles/dining\ room.jpg");
+    background-image: url("../../../assets/bundles/dining.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
