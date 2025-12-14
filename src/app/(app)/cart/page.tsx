@@ -5,6 +5,7 @@ import { IoAdd } from 'react-icons/io5'
 import { GrFormSubtract } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import RemoveCartItemModal from '@/components/modal/RemoveCartItemModal';
+import Link from 'next/link';
 
 const Cart = () => {
     return (
@@ -133,7 +134,7 @@ const Cart = () => {
                         <p className="text-sm text-gray-600">Taxes and shipping calculated at checkout</p>
                     </div>
                     <button className="w-full cursor-pointer md:w-64 bg-button-background text-black font-bold py-3 px-6 rounded transition">
-                        Checkout
+                        <Link href={'/checkout'}>Checkout</Link>
                     </button>
                 </div>
             </div>
