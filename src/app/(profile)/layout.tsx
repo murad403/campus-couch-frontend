@@ -18,6 +18,7 @@ const ProfileLayout = ({
             {/* navbar */}
 
             <Navbar></Navbar>
+                <h1 className="font-semibold text-3xl md:text-4xl text-black text-center md:mb-12 mb-7">My Account</h1>
             <main className="container mx-auto md:mb-20 mb-10 px-5 md:px-0 flex gap-6">
                 <div className='w-full md:w-[20%] flex flex-col gap-2'>
 
