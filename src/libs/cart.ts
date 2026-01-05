@@ -20,5 +20,23 @@ export const cartItems: TCart[] = [
         price: 120,
         quantity: 1,
         image: image,
-    }
+    },
+    {
+        id: 2,
+        name: "Willey chair",
+        material: "Wooden", 
+        color: "Orange",
+        price: 120,
+        quantity: 1,
+        image: image,
+    },
+    {
+        id: 3,
+        name: "Willey chair",
+        material: "Wooden", 
+        color: "Orange",
+        price: 120,
+        quantity: 1,
+        image: image,
+    },
 ]

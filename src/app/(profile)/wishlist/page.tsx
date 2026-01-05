@@ -1,6 +1,5 @@
 import { orders, TOrder } from '@/libs/orders'
 import Image from 'next/image'
-import React from 'react'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 
 const WishList = () => {
